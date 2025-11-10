@@ -13,7 +13,7 @@
 	],
 	"assets": {
 		// The path to the directory containing the `index.html` file to be served at `/`
-		"directory": "../docs"
+		"directory": "public"
 	},
 	"observability": {
 		"enabled": true
