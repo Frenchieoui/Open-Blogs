@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Blogs</title>
+    <script src="../../components/include-components.js"></script>
+    <script src="../../components/set-theme.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../config.js"></script>
+</head>
+
+<body class="bg-base-200" style="opacity: 0; transition: opacity 0.3s ease;">
+    <my-navbar></my-navbar>
+    <main class="relative mt-15 min-h-[calc(100vh_-_60px)] p-10 flex flex-col items-center gap-10">
+        <h3 id="title" class="text-5xl">Title</h3>
+        <div class="flex flex-row gap-10">
+            <h3 id="author" class="text-2xl opacity-60">Author</h3>
+            <h3 id="date" class="text-2xl opacity-60">Date</h3>
+        </div>
+        <article id="content" class="w-full max-w-4xl">
+            <iframe class="w-full h-full" src="/blogs/read/raw"></iframe>
+        </article>
+    </main>
+
+    <script src="get-blog.js"></script>
+</body>
+
+</html>

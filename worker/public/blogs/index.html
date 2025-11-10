@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Blogs</title>
+    <script src="../components/include-components.js"></script>
+    <script src="../components/set-theme.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="update-blogs.js" defer></script>
+</head>
+
+<body class="bg-base-200" style="opacity: 0; transition: opacity 0.3s ease;">
+    <my-navbar></my-navbar>
+    <main class="relative mt-15 min-h-[calc(100vh_-_60px)] p-10 flex flex-col items-center gap-10">
+        <ul id="blog-container" class="list bg-base-100 rounded-box shadow-md max-w-4xl w-full">
+            <li class="p-4 pb-2 text-xl">Blogs</li>
+            <template id="blog-template">
+                <li class="list-row">
+                    <a href="/" class="list-col-grow btn btn-ghost flex flex-col items-start p-10">
+                        <div class="blog-title">Title</div>
+                        <div class="blog-author text-xs font-semibold opacity-60">Author</div>
+                        <div class="blog-date text-xs opacity-60">Date</div>
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </main>
+</body>
+
+</html>
